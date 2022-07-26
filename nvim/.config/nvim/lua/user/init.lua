@@ -107,12 +107,17 @@ local config = {
       {
         "andweeb/presence.nvim"
       },
-
+      {
+        "simrat39/rust-tools.nvim",
+        config = function()
+          require('rust-tools').setup({})
+        end,
+      },
       {
        "catppuccin/nvim",
         as = "catppuccin",
         config = function()
-          require("catppuccin").setup {}
+          require("catppuccin").setup()
         end,
       }
     },
