@@ -10,6 +10,9 @@ exec_always --no-startup-id $XDG_CONFIG_HOME/conky/launch.sh
 
 exec_always --no-startup-id pipewire
 
+exec_always --no-startup-id autotiling
+
+
 exec_always --no-startup-id sudo killall spotifyd && spotifyd
 
 bar {
@@ -32,7 +35,8 @@ bar {
     }
 }
 
-for_window [class="^.*"] border pixel 0.1
+
+for_window [class="^.*"] border pixel 0
 
 #smart_gaps on
 #smart_borders on
@@ -65,8 +69,6 @@ bindsym $mod+q [con_id="__focused__" instance="^(?!dropdown_).*$"] kill
 
 bindsym $mod+c exec --no-startup-id $lock
 
-bindsym $mod+e exec --no-startup-id $term --working-directory ~ -e $fileman
-
 bindsym $mod+i exec --no-startup-id $editor
 
 bindsym $mod+r exec --no-startup-id winresize
@@ -83,29 +85,27 @@ bindsym $mod+Shift+f floating toggle
 
 
 
-bindsym $mod+Left focus left
-bindsym $mod+Shift+Left move left 30
-bindsym $mod+Ctrl+Left move workspace to output left
+bindsym $mod+y focus left
+bindsym $mod+Shift+y move left 30
+bindsym $mod+Ctrl+y move workspace to output left
 
-bindsym $mod+Down focus down
-bindsym $mod+Shift+Down move down 30
-bindsym $mod+Ctrl+Down move workspace to output down
+bindsym $mod+n focus down
+bindsym $mod+Shift+n move down 30
+bindsym $mod+Ctrl+n move workspace to output down
 
-bindsym $mod+Up focus up
-bindsym $mod+Shift+Up move up 30
-bindsym $mod+Ctrl+Up move workspace to output up
+bindsym $mod+e focus up
+bindsym $mod+Shift+e move up 30
+bindsym $mod+Ctrl+e move workspace to output up
 
-bindsym $mod+Right focus right
-bindsym $mod+Shift+Right move right 30
-bindsym $mod+Ctrl+Right move workspace to output right
+bindsym $mod+o focus right
+bindsym $mod+Shift+o move right 30
+bindsym $mod+Ctrl+o move workspace to output right
 
 
 #for_window [class="discord"] move to workspace 8
 #for_window [class="ripcord"] move to workspace 8
 assign [class="Spotify"] media
 assign [class="discord"] chat
-assign [class="ripcord"] chat
-assign [class="hamsket"] chat
 assign [class="Bitwarden"] secure
 assign [class="librewolf"] browser
 
@@ -117,7 +117,7 @@ workspace browser output DP-2
 bindsym $mod+m exec --no-startup-id $term --class Spotify -e spt; workspace media
 bindsym $mod+Ctrl+m workspace media
 
-bindsym $mod+Shift+m exec --no-startup-id hamsket; workspace chat
+bindsym $mod+Shift+m exec --no-startup-id discord; workspace chat
 bindsym $mod+Ctrl+Shift+m workspace chat
 
 bindsym $mod+b exec --no-startup-id librewolf; workspace browser
