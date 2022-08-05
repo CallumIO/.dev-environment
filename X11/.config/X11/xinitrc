@@ -1,4 +1,4 @@
-xrdb -load "$XDG_CONFIG_HOME/X11/xresources"
+/* xrdb -load "$XDG_CONFIG_HOME/X11/xresources" */
 
 xrandr --output DVI-D-0 --mode 1680x1050 --rate 60.00 --right-of DP-4 --output DP-4 --mode 1920x1080 --rate 144.00 --primary --output DP-2 --mode 1920x1080 --rate 60.00 --left-of DP-4 &
 
@@ -11,4 +11,10 @@ killall pipewire &
 pipewire &
 unclutter &
 
-exec /usr/bin/i3
+session=${1:-i3}
+
+case $session in
+    i3|i3wm     ) exec i3;;
+    left|leftwm ) exec leftwm;;
+    *           ) exec *;;
+esac
