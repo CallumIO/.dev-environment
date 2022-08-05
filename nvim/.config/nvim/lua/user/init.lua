@@ -109,8 +109,34 @@ local config = {
       },
       {
         "simrat39/rust-tools.nvim",
+        after = { "nvim-lspconfig", "nvim-lsp-installer" },
         config = function()
-          require('rust-tools').setup({})
+          require("rust-tools").setup {
+            server = {
+              cargo = {
+                loadOutDirsFromCheck = true,
+              },
+              checkOnSave = {
+                command = "clippy",
+              },
+              experimental = {
+                procAttrMacros = true,
+              },
+              workspace = {
+                symbol = {
+                  search = {
+                    kind = "all_symbols"
+                  }
+                }
+              },
+            },
+            tools = {
+              inlay_hints = {
+                parameter_hints_prefix = "  ",
+                other_hints_prefix = "  ",
+              },
+            },
+          }
         end,
       },
       {
@@ -134,6 +160,7 @@ local config = {
           extra_args = {"--line-length", "101"}
         }),
         null_ls.builtins.formatting.eslint_d,
+        -- null_ls.builtins.formatting.rustfmt,
         null_ls.builtins.formatting.fixjson,
         -- Set a linter
         null_ls.builtins.diagnostics.rubocop,
@@ -210,6 +237,7 @@ local config = {
     },
     -- easily add or disable built in mappings added during LSP attaching
     mappings = {
+      -- skip_setup = { "rust_analyzer" },
       n = {
         -- ["<leader>lf"] = false -- disable formatting keymap
       },
