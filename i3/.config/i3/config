@@ -60,6 +60,8 @@ gaps inner $inner_gaps
 
 gaps outer $outer_gaps
 
+bindsym XF86AudioPlay exec playerctl play-pause
+
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec $term --working-directory $(xcwd)
 
