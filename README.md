@@ -1,11 +1,9 @@
 ## Usage
-To use the environment setup, execute the following commands.
 
-This assumes git is installed.
+This assumes git and GNU Stow is installed.
+
 ```
-cd ~
-git clone https://github.com/CallumIO/.dotfiles
+git clone git@github.com:callumio/.dotfiles.git
 cd .dotfiles
-chmod +x install.sh
-./install.sh
+stow <config name>
 ```
