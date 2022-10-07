@@ -1,6 +1,6 @@
 /* xrdb -load "$XDG_CONFIG_HOME/X11/xresources" */
 
-xrandr --output DVI-D-0 --mode 1680x1050 --rate 60.00 --right-of DP-4 --output DP-4 --mode 1920x1080 --rate 144.00 --primary --output DP-2 --mode 1920x1080 --rate 60.00 --left-of DP-4 &
+xrandr /* --output DVI-D-0 --mode 1680x1050 --rate 60.00 --right-of DP-4 */ --output DP-4 --mode 1920x1080 --rate 144.00 --primary --output DP-2 --mode 1920x1080 --rate 60.00 --left-of DP-4 &
 
 xset s off &
 xset -dpms &
