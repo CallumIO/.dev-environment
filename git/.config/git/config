@@ -4,7 +4,7 @@
 	signingkey = D382C4AFEECEAA90
 [core]
 	longpaths = true
-	excludesfile = /home/c/.config/git/gitignore
+	excludesfile = ~/.config/git/gitignore
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [interactive]
 	diffFilter = diff-so-fancy --patch
@@ -12,3 +12,5 @@
 	gpgsign = true
 [init]
 	defaultBranch = main
+[includeIf "gitdir:~/repos/projects.cs.nott.ac.uk/"]
+	path = "~/.config/git/university.gitconfig"

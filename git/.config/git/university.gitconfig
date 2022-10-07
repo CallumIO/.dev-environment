@@ -1,0 +1,5 @@
+[user]
+    email = psycl6@nottingham.ac.uk
+
+[commit]
+    gpgsign = false
