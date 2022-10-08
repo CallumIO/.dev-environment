@@ -1,5 +1,3 @@
 [user]
     email = psycl6@nottingham.ac.uk
-
-[commit]
-    gpgsign = false
+    signingkey = 5A944DF89B6F65AC
