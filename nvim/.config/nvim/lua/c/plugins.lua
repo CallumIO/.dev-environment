@@ -73,6 +73,12 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip" -- Snippet Engine
   use "rafamadriz/friendly-snippets" -- Useful Snippets
 
+  use {
+      "nvim-treesitter/nvim-treesitter",
+      run = ":TSUpdate",
+  }
+  use "p00f/nvim-ts-rainbow"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
