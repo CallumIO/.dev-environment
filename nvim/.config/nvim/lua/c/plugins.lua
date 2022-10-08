@@ -79,6 +79,10 @@ return packer.startup(function(use)
   }
   use "p00f/nvim-ts-rainbow"
 
+  use "neovim/nvim-lspconfig"  
+  use "williamboman/nvim-lsp-installer"
+  use "jose-elias-alvarez/null-ls.nvim"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
