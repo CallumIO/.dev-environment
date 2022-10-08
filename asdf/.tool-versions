@@ -1,6 +1,6 @@
 python 3.10.4
-nodejs 18.0.0
-rust 1.62.1
+nodejs 18.10.0
+rust 1.64.0
 perl 5.35.11
 dart 2.17.5
 haskell 9.2.3
