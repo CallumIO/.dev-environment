@@ -5,3 +5,6 @@ require "c.colourscheme"
 require "c.cmp"
 require "c.lsp"
 require "c.treesitter"
+require "c.gitsigns"
+require "c.telescope"
+

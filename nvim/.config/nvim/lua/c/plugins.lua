@@ -49,10 +49,12 @@ return packer.startup(function(use)
     }
   }
   use "lewis6991/gitsigns.nvim" -- Git integration
+
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0', -- Fuzzy Finder
     requires = { {'nvim-lua/plenary.nvim'} } 
   }
+  use "nvim-telescope/telescope-media-files.nvim" -- Media Preview for Telescope
   use "rebelot/heirline.nvim" -- Status Line
   use {
     "akinsho/toggleterm.nvim",
