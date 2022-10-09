@@ -67,6 +67,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-buffer" -- Buffer Autocompletion
   use "hrsh7th/cmp-path" -- Path Autocompletion
   use "hrsh7th/cmp-cmdline" -- Command Line Autocompletion
+  use "hrsh7th/cmp-nvim-lsp" -- LSP Autocompletion
   use "saadparwaiz1/cmp_luasnip" -- Snippet Autocompletion
 
   -- Snippets --
