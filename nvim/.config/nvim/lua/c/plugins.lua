@@ -86,6 +86,10 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer"
   use "jose-elias-alvarez/null-ls.nvim"
 
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
+  use "nvim-lualine/lualine.nvim"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

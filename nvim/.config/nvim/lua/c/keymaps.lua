@@ -32,6 +32,9 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<C-\\>", ":ToggleTerm<CR>", opts)
 keymap("t", "<C-\\>", "exit<CR>", opts)
 
+keymap("n", "<Tab>", ":bnext<CR>", opts)
+keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
+
 vim.keymap.set('n', 'ff', tele.find_files, {})
 vim.keymap.set('n', 'fg', tele.live_grep, {})
 vim.keymap.set('n', 'fb', tele.buffers, {})
@@ -62,3 +65,6 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- NeoTree
 keymap("n", "<leader>e", ":NeoTreeFocusToggle<cr>", opts)
+
+-- Formatting
+keymap("n", "<leader>f", ":Format<cr>", opts)

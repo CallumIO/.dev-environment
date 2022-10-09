@@ -1,7 +1,7 @@
 local options = {
 	backup = false,
 	clipboard = "unnamedplus",
-	cmdheight = 2,
+	cmdheight = 1,
 	completeopt = { "menuone", "noselect" },
 	conceallevel = 0,
 	fileencoding = "utf-8",
@@ -26,7 +26,7 @@ local options = {
 	cursorline = false,
 	number = true,
 	relativenumber = true,
-	numberwidth = 2,
+	numberwidth = 1,
 	signcolumn = "no",
 	wrap = false,
 	scrolloff = 8,
@@ -38,6 +38,6 @@ vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.iskeyword:append("-")
 
-for k,v in pairs(options) do 
+for k,v in pairs(options) do
     vim.opt[k] = v
 end

@@ -7,4 +7,6 @@ require "c.lsp"
 require "c.treesitter"
 require "c.gitsigns"
 require "c.telescope"
-
+require "c.bufferline"
+require "c.lualine"
+require "c.null-ls"
