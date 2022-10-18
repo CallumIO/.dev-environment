@@ -5,6 +5,8 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 local tele = require('telescope.builtin')
 
+require('leap').add_default_mappings()
+
 keymap("", "<Space>", "<Nop>", opts)
 
 vim.g.mapleader = " "

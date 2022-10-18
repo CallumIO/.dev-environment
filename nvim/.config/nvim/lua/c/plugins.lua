@@ -90,6 +90,9 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
 
+  use "ggandor/leap.nvim"
+  use "tpope/vim-repeat"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
