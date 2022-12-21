@@ -7,6 +7,16 @@ bufferline = "multiple"
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
+tab = "goto_next_buffer"
+S-tab = "goto_previous_buffer"
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+C-l = "jump_view_right"
+"C-A-h" = "swap_view_left"
+"C-A-j" = "swap_view_down"
+"C-A-k" = "swap_view_up"
+"C-A-l" = "swap_view_right"
 
 [keys.insert]
 j = {k = "normal_mode"}
