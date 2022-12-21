@@ -20,3 +20,4 @@ alias neovide 'swallow neovide --nofork --multigrid'
 alias mpv 'swallow mpv'
 alias nsxiv 'swallow nsxiv'
 
+alias hx 'helix'
