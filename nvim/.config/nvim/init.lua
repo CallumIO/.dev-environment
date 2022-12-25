@@ -1,6 +1,6 @@
 require "c.options"
-require "c.keymaps"
 require "c.plugins"
+require "c.keymaps"
 require "c.colourscheme"
 require "c.cmp"
 require "c.lsp"
