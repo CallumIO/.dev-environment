@@ -42,7 +42,7 @@ return packer.startup(function(use)
   use {
     "nvim-neo-tree/neo-tree.nvim", -- File Explorer
     branch = "v2.x",
-    requires = { 
+    requires = {
       "nvim-lua/plenary.nvim",
       "kyazdani42/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
@@ -52,7 +52,7 @@ return packer.startup(function(use)
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0', -- Fuzzy Finder
-    requires = { {'nvim-lua/plenary.nvim'} } 
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use "nvim-telescope/telescope-media-files.nvim" -- Media Preview for Telescope
   use "rebelot/heirline.nvim" -- Status Line
@@ -77,13 +77,14 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- Useful Snippets
 
   use {
-      "nvim-treesitter/nvim-treesitter",
-      run = ":TSUpdate",
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
   }
   use "p00f/nvim-ts-rainbow"
 
-  use "neovim/nvim-lspconfig"  
+  use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
+  use 'simrat39/rust-tools.nvim'
   use "jose-elias-alvarez/null-ls.nvim"
 
   use "akinsho/bufferline.nvim"
@@ -92,6 +93,8 @@ return packer.startup(function(use)
 
   use "ggandor/leap.nvim"
   use "tpope/vim-repeat"
+
+  use 'andweeb/presence.nvim'
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
