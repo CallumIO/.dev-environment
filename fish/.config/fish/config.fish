@@ -7,6 +7,9 @@ set -g theme_display_user yes
 set -g theme_hide_hostname no
 set -g theme_hostname always
 
+fish_add_path $HOME/.ghcup/bin
+fish_add_path $HOME/.cabal/bin
+
 source /opt/asdf-vm/asdf.fish
 
 # X runs at login
